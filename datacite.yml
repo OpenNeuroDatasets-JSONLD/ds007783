@@ -23,6 +23,16 @@ data:
             schemeUri: https://orcid.org
         contributorType: Researcher
         order: 2
+      - name: YE Yunshuang
+        givenName: ''
+        familyName: ''
+        nameType: Personal
+        nameIdentifiers: &ref_2
+          - nameIdentifier: https://orcid.org/0000-0002-4463-4334
+            nameIdentifierScheme: ORCID
+            schemeUri: https://orcid.org
+        contributorType: Researcher
+        order: 3
     creators:
       - name: YE Yunshuang
         nameType: Personal
@@ -30,6 +40,9 @@ data:
       - name: YE Yunshuang
         nameType: Personal
         nameIdentifiers: *ref_1
+      - name: YE Yunshuang
+        nameType: Personal
+        nameIdentifiers: *ref_2
     descriptions:
       - description: N/A
         descriptionType: Abstract
