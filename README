@@ -1,0 +1,159 @@
+# SHJT_PropofolSleep PRO10 – Multimodal BIDS Dataset
+
+## Dataset Overview
+
+This dataset contains multimodal neuroimaging data from propofol-induced sleep in mice (PRO10 cohort), organized according to the Brain Imaging Data Structure (BIDS) standard version 1.9.0.
+
+**Data Modalities:**
+- **fMRI**: Resting-state functional MRI data from 10 mice (sub-02 to sub-11)
+- **EEG**: Raw EEG recordings from 7 mice (sub-12 to sub-18)
+
+**Important Note:** The EEG and fMRI data are **not in a one-to-one correspondence**. They represent independent recordings from different animals within the same experimental cohort (PRO10). This is clearly indicated in the `participants.tsv` file under the `data_types` column.
+
+## Dataset Structure
+
+```
+fMRI_BIDS/
+├── dataset_description.json       # BIDS dataset metadata
+├── participants.tsv             # Subject metadata (fMRI + EEG)
+├── participants.json             # Metadata column descriptions
+├── README                       # This file
+├── task-rest_bold.json          # Task-specific JSON (inherited)
+├── .bidsignore                 # BIDS ignore file
+├── sub-02/ to sub-11/         # fMRI subjects (10 subjects)
+│   ├── anat/                   # T2-weighted anatomical images
+│   │   ├── sub-XX_T2w.nii.gz
+│   │   └── sub-XX_T2w.json
+│   └── func/                   # Resting-state BOLD fMRI
+│       ├── sub-XX_task-rest_bold.nii.gz
+│       └── sub-XX_task-rest_bold.json
+├── sub-12/ to sub-18/         # EEG subjects (7 subjects)
+│   └── eeg/                   # Raw EEG recordings (EDF format)
+│       ├── sub-XX_task-rest_eeg.edf
+│       └── sub-XX_task-rest_eeg.json
+└── code/                       # Python analysis scripts (see below)
+```
+
+## Acquisition Parameters
+
+### fMRI Data
+| Parameter | Value |
+|-----------|-------|
+| Scanner | Bruker BioSpec 94/20, 9.4 T |
+| Sequence | Gradient-echo EPI |
+| TR | 2000 ms |
+| TE | (see individual JSON sidecars) |
+| Slices | 30 (axial, interleaved ascending) |
+| Slice timing | 0.0 – 1.93 s (30 slices, step = 0.0667 s) |
+| Voxel size | (see individual NIfTI headers) |
+| Phase encoding direction | j- (anterior–posterior) |
+| Subjects | n=10 (sub-02 through sub-11) |
+
+### EEG Data
+| Parameter | Value |
+|-----------|-------|
+| Format | EDF (European Data Format) |
+| Sampling frequency | 1000 Hz |
+| Channels | 1 (EEG) |
+| Power line frequency | 50 Hz |
+| Recording type | Continuous |
+| Subjects | n=7 (sub-12 through sub-18) |
+| Total size | ~176 MB |
+
+## Subject ID Mapping (Original to BIDS)
+
+### fMRI Subjects
+| Original ID | BIDS ID | Source Folder |
+|-------------|---------|---------------|
+| 1 | sub-02 | (from pro10 dataset) |
+| 2 | sub-03 | (from pro10 dataset) |
+| 3b | sub-04 | (from pro10 dataset) |
+| 4 | sub-05 | (from pro10 dataset) |
+| 5c | sub-06 | (from pro10 dataset) |
+| 6 | sub-07 | (from pro10 dataset) |
+| 7b | sub-08 | (from pro10 dataset) |
+| 8 | sub-09 | (from pro10 dataset) |
+| 9 | sub-10 | (from pro10 dataset) |
+| 10 | sub-11 | (from pro10 dataset) |
+
+### EEG Subjects
+| Original File | BIDS ID | Notes |
+|---------------|---------|-------|
+| PRO10_1.edf | sub-12 | Independent recording |
+| PRO10_2.edf | sub-13 | Independent recording |
+| PRO10_3.edf | sub-14 | Independent recording |
+| PRO10_6.edf | sub-15 | Independent recording |
+| PRO10_7.edf | sub-16 | Independent recording |
+| PRO10_10.edf | sub-17 | Independent recording |
+| PRO10_13.edf | sub-18 | Independent recording |
+
+## Code Directory (`code/`)
+
+The `code/` directory contains Python 3 scripts used to generate all figures in the manuscript. Each script is prefixed with the figure it corresponds to.
+
+### Requirements
+- Python 3.x
+- numpy
+- scipy
+- matplotlib
+- nibabel
+- nilearn
+
+### Script List
+| Script | Description |
+|--------|-------------|
+| `Fig1F-*` | Fraction of high-motion TRs analysis |
+| `Fig3A-*` | Behavioral response rate time course |
+| `Fig3DE-*` | Modular brain network metrics |
+| `Fig3FH-*` | Graph theory statistics |
+| `Fig3G-*` | Graph theory analysis |
+| `Fig4ABC-*` | Functional connectivity matrix with significance |
+| `Fig4DEF-*` | Connectogram visualization |
+| `Fig4G-*` | ROI summary violin plots |
+| `Fig5AB-*` | Brain activation maps (mricroGL-friendly) |
+| `Fig5C-*` | Binary significance masks |
+| `Fig5D-*` | Global signal subject-level analysis |
+| `Fig5E-*` | Bubble plot of subjects |
+| `Fig5F-*` | Group mask validation |
+| `Fig5G-*` | Subject-level amplification analysis |
+| `Fig6A-Fig6J*` | Thalamus-specific analyses (connectivity, specificity, dynamics) |
+| `S-FigS1C-S-FigS6I-*` | Supplementary figure scripts |
+
+## Validation
+
+This dataset passes `bids-validator` checks. To validate locally:
+
+```bash
+npm install -g bids-validator
+bids-validator /path/to/fMRI_BIDS/
+```
+
+## Usage Notes
+
+1. **For fMRI analysis**: Use subjects sub-02 through sub-11
+2. **For EEG analysis**: Use subjects sub-12 through sub-18
+3. **Code execution**: Run Python scripts from the `code/` directory
+4. **Data correspondence**: Remember that fMRI and EEG data are from different animals
+
+## License
+
+This dataset is made available under the **Creative Commons Attribution 4.0 International (CC-BY 4.0)** license.
+
+## Citation
+
+If you use this dataset, please cite:
+
+> Ye Bo et al. (2025). PRO10 Dataset: Propofol-Induced Sleep in Mice - Multimodal fMRI and EEG Data. OpenNeuro.
+
+Also available on Figshare: https://doi.org/10.6084/m9.figshare.32227659
+
+## Contact
+
+For questions about this dataset, please contact: Ye Bo (Shanghai Jiao Tong University)
+
+## Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| v1.0 | 2025-05-09 | Initial release (fMRI only) |
+| v2.0 | 2026-05-09 | Added EEG data and analysis code |
