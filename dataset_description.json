@@ -16,9 +16,7 @@
     "EthicsApprovals": [
         "n/a"
     ],
-    "ReferencesAndLinks": [
-        "https://doi.org/10.6084/m9.figshare.32227659"
-    ],
+    "ReferencesAndLinks": [],
     "GeneratedBy": [
         {
             "Name": "convert_to_bids.py",
