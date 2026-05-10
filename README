@@ -1,13 +1,11 @@
-# SHJT_PropofolSleep PRO10 – fMRI BIDS Dataset
+# fMRI Dataset for Studying Propofol Anesthesia Mechanisms with Awake Baseline in Mice
 
 ## Dataset Overview
 
-This dataset contains resting-state functional MRI (fMRI) data from propofol-induced sleep in mice (PRO10 cohort), organized according to the Brain Imaging Data Structure (BIDS) standard version 1.9.0.
+This dataset contains resting-state functional MRI (fMRI) data from propofol-induced sleep in mice, organized according to the Brain Imaging Data Structure (BIDS) standard version 1.9.0.
 
 **Data Modality:**
 - **fMRI only**: Resting-state functional MRI data from 10 mice (sub-02 to sub-11)
-
-**Note:** This is the fMRI-only subset of the PRO10 multimodal dataset. The EEG data from the same cohort is available as a separate dataset on OpenNeuro.
 
 ## Dataset Structure
 
@@ -48,16 +46,16 @@ fMRI_only_BIDS/
 
 | Original ID | BIDS ID | Source Folder |
 |-------------|---------|---------------|
-| 1 | sub-02 | (from pro10 dataset) |
-| 2 | sub-03 | (from pro10 dataset) |
-| 3b | sub-04 | (from pro10 dataset) |
-| 4 | sub-05 | (from pro10 dataset) |
-| 5c | sub-06 | (from pro10 dataset) |
-| 6 | sub-07 | (from pro10 dataset) |
-| 7b | sub-08 | (from pro10 dataset) |
-| 8 | sub-09 | (from pro10 dataset) |
-| 9 | sub-10 | (from pro10 dataset) |
-| 10 | sub-11 | (from pro10 dataset) |
+| 1 | sub-02 | (from PRO10 dataset) |
+| 2 | sub-03 | (from PRO10 dataset) |
+| 3b | sub-04 | (from PRO10 dataset) |
+| 4 | sub-05 | (from PRO10 dataset) |
+| 5c | sub-06 | (from PRO10 dataset) |
+| 6 | sub-07 | (from PRO10 dataset) |
+| 7b | sub-08 | (from PRO10 dataset) |
+| 8 | sub-09 | (from PRO10 dataset) |
+| 9 | sub-10 | (from PRO10 dataset) |
+| 10 | sub-11 | (from PRO10 dataset) |
 
 ## Code Directory (`code/`)
 
@@ -104,7 +102,6 @@ bids-validator /path/to/fMRI_only_BIDS/
 
 1. **For fMRI analysis**: Use subjects sub-02 through sub-11
 2. **Code execution**: Run Python scripts from the `code/` directory
-3. **EEG data**: Available as a separate dataset: https://doi.org/10.6084/m9.figshare.32227659
 
 ## License
 
@@ -114,13 +111,13 @@ This dataset is made available under the **Creative Commons Attribution 4.0 Inte
 
 If you use this dataset, please cite:
 
-> Ye Bo et al. (2025). PRO10 Dataset: Propofol-Induced Sleep in Mice - fMRI Data. OpenNeuro.
+> Ye Yunshuang et al. (2025). fMRI Dataset for Studying Propofol Anesthesia Mechanisms with Awake Baseline in Mice. OpenNeuro.
 
 Also available on Figshare: https://doi.org/10.6084/m9.figshare.32227659
 
 ## Contact
 
-For questions about this dataset, please contact: Ye Bo (Shanghai Jiao Tong University)
+For questions about this dataset, please contact: Ye Yunshuang (Shanghai Jiao Tong University)
 
 ## Version History
 
