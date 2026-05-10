@@ -10,7 +10,8 @@
     "Acknowledgements": "n/a",
     "HowToAcknowledge": "Please cite this dataset as per the provided citation.",
     "Funding": [
-        "n/a"
+        "n/a",
+        "This work was supported by National Key Research and Development Program of China (Noncommunicable Chronic Diseases-National Science and Technology Major Project: 2024ZD0529202 to JW), National Natural Science Foundation of China (82471504 and 32271148 to JW), Key R&D Program of Ningxia Hui Autonomous Region (2026BEG02033 and 2024BEG02027 to JW), the Open Project of Translational Medicine National Major Science and Technology Infrastructure (Shanghai) (TMSK-2024-107 to JW), Medical key Discipline Project of Songjiang District (24SJYXZDA04 to DHW), the Key Discipline Project of Shanghai Municipal Health Commission (2024ZDXK0050 to DHW), and also supported by the Research Grant of Key Laboratory of Anesthesiology and Resuscitation (Huazhong University of Science and Technology), Ministry of Education, China (2025MZFS002 to YSY ).) and Shanghai Engineering Research Center of Peri-operative Organ Support and Function Preservation (No. 20DZ2254200 to JX)."
     ],
     "EthicsApprovals": [
         "n/a"
