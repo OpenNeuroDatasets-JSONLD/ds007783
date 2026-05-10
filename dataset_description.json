@@ -1,34 +1,34 @@
 {
-    "Name":  "SHJT_PropofolSleep_PRO10",
-    "BIDSVersion":  "1.9.0",
-    "DatasetType":  "raw",
-    "Authors":  [
-                    "Ye Bo"
-                ],
-    "DatasetDOI":  "",
-    "License":  "CC-BY 4.0",
-    "Acknowledgements":  "n/a",
-    "HowToAcknowledge":  "Please cite this dataset as per the provided citation.",
-    "Funding":  [
-                    "n/a"
-                ],
-    "EthicsApprovals":  [
-                            "n/a"
-                        ],
-    "ReferencesAndLinks":  [
-                               "https://doi.org/10.6084/m9.figshare.32227659"
-                           ],
-    "GeneratedBy":  [
-                        {
-                            "Name":  "convert_to_bids.py",
-                            "Version":  "1.0",
-                            "Description":  "Converted fMRI data from non-standard layout to BIDS 1.9.0"
-                        },
-                        {
-                            "Name":  "eeg_organization.py",
-                            "Version":  "1.0",
-                            "Description":  "Organized EEG data (EDF format) into BIDS 1.9.0 format"
-                        }
-                    ],
-    "Description":  "Multimodal neuroimaging dataset (fMRI and EEG) from propofol-induced sleep in mice. fMRI data: 10 subjects (sub-02 to sub-11). EEG data: 7 subjects (sub-12 to sub-18). Note: EEG and fMRI data are from different animals within the same experimental cohort."
+    "Name": "fMRI Dataset for Studying Propofol Anesthesia Mechanisms with Awake Baseline in Mice",
+    "BIDSVersion": "1.9.0",
+    "DatasetType": "raw",
+    "Authors": [
+        "Ye Bo"
+    ],
+    "DatasetDOI": "",
+    "License": "CC0",
+    "Acknowledgements": "n/a",
+    "HowToAcknowledge": "Please cite this dataset as per the provided citation.",
+    "Funding": [
+        "n/a"
+    ],
+    "EthicsApprovals": [
+        "n/a"
+    ],
+    "ReferencesAndLinks": [
+        "https://doi.org/10.6084/m9.figshare.32227659"
+    ],
+    "GeneratedBy": [
+        {
+            "Name": "convert_to_bids.py",
+            "Version": "1.0",
+            "Description": "Converted fMRI data from non-standard layout to BIDS 1.9.0"
+        },
+        {
+            "Name": "eeg_organization.py",
+            "Version": "1.0",
+            "Description": "Organized EEG data (EDF format) into BIDS 1.9.0 format"
+        }
+    ],
+    "Description": "Multimodal neuroimaging dataset (fMRI and EEG) from propofol-induced sleep in mice. fMRI data: 10 subjects (sub-02 to sub-11). EEG data: 7 subjects (sub-12 to sub-18). Note: EEG and fMRI data are from different animals within the same experimental cohort."
 }
