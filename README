@@ -10,10 +10,10 @@ This dataset contains resting-state functional MRI (fMRI) data from propofol-ind
 ## Dataset Structure
 
 ```
-fMRI_only_BIDS/
+ds007783/
 ├── dataset_description.json       # BIDS dataset metadata
-├── participants.tsv             # Subject metadata (fMRI only)
-├── participants.json             # Metadata column descriptions
+├── participants.tsv             # Subject metadata
+├── participants.json            # Metadata column descriptions
 ├── README                       # This file
 ├── task-rest_bold.json          # Task-specific JSON (inherited)
 ├── .bidsignore                 # BIDS ignore file
@@ -95,7 +95,7 @@ This dataset passes `bids-validator` checks. To validate locally:
 
 ```bash
 npm install -g bids-validator
-bids-validator /path/to/fMRI_only_BIDS/
+bids-validator /path/to/ds007783/
 ```
 
 ## Usage Notes
@@ -105,13 +105,16 @@ bids-validator /path/to/fMRI_only_BIDS/
 
 ## License
 
-This dataset is made available under the **Creative Commons Attribution 4.0 International (CC-BY 4.0)** license.
+This dataset is made available under the **Creative Commons CC0 1.0 Universal
+(Public Domain Dedication)** license. This is consistent with the license under
+which the dataset is registered and distributed on OpenNeuro; see
+`dataset_description.json` for the machine-readable declaration.
 
 ## Citation
 
 If you use this dataset, please cite:
 
-> Ye Yunshuang et al. (2025). fMRI Dataset for Studying Propofol Anesthesia Mechanisms with Awake Baseline in Mice. OpenNeuro.
+> Ye Yunshuang (2026). fMRI Dataset for Studying Propofol Anesthesia Mechanisms with Awake Baseline in Mice (version 1.1.0). OpenNeuro. https://doi.org/10.18112/openneuro.ds007783.v1.1.0
 
 Also available on Figshare: https://doi.org/10.6084/m9.figshare.32227659
 
@@ -123,4 +126,5 @@ For questions about this dataset, please contact: Ye Yunshuang (Shanghai Jiao To
 
 | Version | Date | Changes |
 |---------|------|---------|
-| v1.0 | 2025-05-10 | Initial release (fMRI only) |
+| v1.0 | 2026-05-10 | Initial release (fMRI only) |
+| v1.1 | 2026-09-28 | Metadata corrections: author name (Ye Bo → Ye Yunshuang), citation DOI, ethics approval statement, license declaration aligned with OpenNeuro |
